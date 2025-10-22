@@ -10,16 +10,3 @@ Dalouna is a Palestinian restaurant offering traditional Mediterranean dishes ma
 
 ### Made By - ASE.
 
-### TestLIne For Commit with VSCODE
-
-### ADD AONTHGER TEST TLINE
-
-## Adding Another TestLine #v3
-
-## Adding Onther TEST LEINE V4
-
-### ADDDDING TEST V3433
-
-### ADDING TEST LINE V20
-
-Hello World How ARe You This IS Test
