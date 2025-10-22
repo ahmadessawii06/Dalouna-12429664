@@ -1,0 +1,24 @@
+/* 
+ css/styles.css 
+ Student Name: Ahmad Essawii
+ Student Id: 12429664
+*/
+
+:root {
+  --bg: #faf7f2;
+  --text: hwb(0 12% 88%);
+  --muted: #6b6b6b;
+  --brand: #216869;
+  --brand-2: #49a078;
+  --card: #ffffff;
+  --border: #e9e3db;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
