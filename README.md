@@ -1,12 +1,8 @@
-## Project Description
+# Project Description
 
-## My Name:
+## My Name: Ahmad Essawii
 
-Ahmad Essawii
-
-## My ID:
-
-12429664
+## My ID: 12429664
 
 ## Short Descripiton:
 
