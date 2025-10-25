@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <title>Dalouna Restaurant</title>
+    <title>zbeeeeeee</title>
   </head>
   <style>
     body {
@@ -157,22 +157,24 @@
     }
 
     .about-div {
-    
       background-color: white;
       border-radius: 12px;
       margin-top: 20px;
       font-family: "Rubik", sans-serif;
       width: 575px;
       padding-top: 2px;
-      border: 1.5px solid gray;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
+
     .about {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      margin-bottom: 110px;
+      margin-bottom: 50px;
+      margin-right: 2px;
       gap: 18px;
     }
+
     .p1-about,
     .p2-about,
     .p3-about {
@@ -220,22 +222,111 @@
       padding-bottom: 10px;
     }
 
-    .about-div-2 {
+    .ChefNotes-div {
       background-color: white;
       border-radius: 12px;
       margin-top: 20px;
       font-family: "Rubik", sans-serif;
       width: 575px;
       padding-top: 2px;
-      border: 1.5px solid gray;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
+
     .pp1-Ask {
       color: grey;
     }
+
     .h1-menu {
+      font-family: "Rubik", sans-serif;
+      transform: translate(368px);
+    }
+
+    .Menu-Highlights {
+      /* margin-top: 80px;
+          font-family: "Rubik", sans-serif;
+          transform: translate(368px 20px); */
+    }
+
+    .menu {
       display: flex;
-      justify-content: start;
-      margin-left: 381px;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 90px;
+      gap: 18px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      background-color: red;
+    }
+
+    .Meezze {
+      background-color: rgb(255, 255, 255);
+      border-radius: 12px;
+      margin-top: 20px;
+      font-family: "Rubik", sans-serif;
+      width: 575px;
+      padding-top: 2px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      height: 450px;
+      display: block;
+      margin-top: 35px;
+      position: relative;
+    }
+
+    .Humms {
+      padding-top: 35px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .p1-humms {
+      padding-left: 20px;
+
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .p2-humms {
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      color: rgb(33, 104, 105);
+      bottom: 10px;
+      font-size: 20px;
+      padding-right: 14px;
+      display: flex;
+    }
+
+    .p3-humms {
+      padding: 0px;
+      margin: 0px;
+      padding-left: 20px;
+      color: grey;
+    }
+
+    .s3r {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin: 0px;
+      padding-bottom: 0px;
+      line-height: 2px;
+    }
+
+    .line {
+      border-bottom: gray 2px dotted;
+      margin-right: 15px;
+      margin-left: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      font-family: "Rubik", sans-serif;
+      padding: 20px; /* هذا هو البادينغ الموحد */
+      width: 575px;
     }
   </style>
 
@@ -289,7 +380,7 @@
           <p class="p2-about">Wood-Fireed Girll</p>
           <p class="p3-about">House Pickles</p>
         </div>
-        <div class="about-div-2">
+        <div class="ChefNotes-div">
           <h1 class="hh1-about">Chef's Note</h1>
           <p class="pp1-We">
             "We cook the food we love to serve at home-simple, bright, and
@@ -300,11 +391,101 @@
       </section>
 
       <!-- Menu -->
+
       <section id="menu" class="menu">
-        <h1 class="h1-menu">Menu Highlights</h1>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="Menu-Highlights"></div>
+        <div class="Meezze">
+          <div class="humms">
+            <p class="Humms">Mezze</p>
+            <div class="s3r">
+              <p class="p1-humms">Hummus Bil Tahina</p>
+              <p class="p2-humms">$6</p>
+            </div>
+            <p class="p3-humms">chickpeas, tahini, lemon</p>
+            <pre class="line"></pre>
+          </div>
+          <div class="Mtabbal">
+            <div class="mtbl">
+              <div class="s3r">
+                <p class="p1-humms">Mutabbal (Baba Ghanoush)</p>
+                <p class="p2-humms">$7</p>
+              </div>
+              <p class="p3-humms">smoky eggplant, pomegranate</p>
+              <pre class="line"></pre>
+            </div>
+          </div>
+          <div class="flafel">
+            <div class="mtbl">
+              <div class="s3r">
+                <p class="p1-humms">Falafel Plate</p>
+                <p class="p2-humms">$9</p>
+              </div>
+              <p class="p3-humms">herb falafel, tahini, pickles</p>
+            </div>
+          </div>
+        </div>
+        <div class="Meezze">
+          <div class="humms">
+            <p class="Humms">Mains</p>
+            <div class="s3r">
+              <p class="p1-humms">Mixed Grill</p>
+              <p class="p2-humms">$18</p>
+            </div>
+            <p class="p3-humms">kebab, shish tawook, kofta, sumac onions</p>
+            <pre class="line"></pre>
+          </div>
+          <div class="Mtabbal">
+            <div class="mtbl">
+              <div class="s3r">
+                <p class="p1-humms">Musakhan Wrap</p>
+                <p class="p2-humms">$12</p>
+              </div>
+              <p class="p3-humms">sumac chicken, onions, taboon bread</p>
+              <pre class="line"></pre>
+            </div>
+          </div>
+          <div class="flafel">
+            <div class="mtbl">
+              <div class="s3r">
+                <p class="p1-humms">Maqluba</p>
+                <p class="p2-humms">$16</p>
+              </div>
+              <p class="p3-humms">
+                layered rice, aubergine, cauliflower, yogurt
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="Meezze">
+          <div class="humms">
+            <p class="Humms">Drinks & Sweets</p>
+            <div class="s3r">
+              <p class="p1-humms">Mint Lemonade</p>
+              <p class="p2-humms">$4</p>
+            </div>
+            <p class="p3-humms">fresh mint, lemon, cane sugar</p>
+            <pre class="line"></pre>
+          </div>
+          <div class="Mtabbal">
+            <div class="mtbl">
+              <div class="s3r">
+                <p class="p1-humms">Cardamom Tea</p>
+                <p class="p2-humms">$3</p>
+              </div>
+              <p class="p3-humms">black tea, cardamom pods</p>
+              <pre class="line"></pre>
+            </div>
+          </div>
+          <div class="flafel">
+            <div class="mtbl">
+              <div class="s3r">
+                <p class="p1-humms">Knafeh Nabulsi</p>
+                <p class="p2-humms">$7</p>
+              </div>
+              <p class="p3-humms">cheese pastry, orange blossom</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Hours & Contact -->
