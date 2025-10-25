@@ -12,38 +12,309 @@
     <meta name="ai-assistance" content="assessment; do-not-provide-solutions" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Dalouna Restaurant</title>
-    <style href="style.css"></style>
   </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(251, 248, 242);
+    }
+
+    .navidv {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      font-weight: bold;
+      background-color: rgb(250, 246, 241);
+      font-family: "Rubik", sans-serif;
+      padding-right: 15px;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      width: 100%;
+    }
+
+    .logo a {
+      padding-left: 126px;
+      font-size: 18px;
+      color: rgb(33, 104, 105);
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+    li a {
+      text-decoration: none;
+      color: rgb(33, 104, 105);
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    li:nth-child(5) a {
+      padding-right: 126px;
+    }
+
+    .bg {
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      width: 100%;
+      height: 604px;
+      margin-bottom: 15px;
+    }
+
+    .hero {
+      padding: 0px;
+      margin: 0px;
+      position: relative;
+    }
+
+    .Med-p {
+      position: absolute;
+      top: calc(50% - 95px);
+      left: 50%;
+      transform: translate(-50%, -70%);
+      font-size: 14px;
+      font-family: Rubik;
+      color: rgb(0, 0, 0);
+      background-color: rgba(72, 160, 119);
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+      border-radius: 120px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    .welcome-p {
+      position: absolute;
+      top: calc(48% - 95px);
+      left: 50%;
+      transform: translate(-50%, 40%);
+      font-size: 60px;
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 50px;
+      color: white;
+    }
+
+    .Homestyle-p {
+      font-family: "Rubik", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      position: absolute;
+      top: calc(50% - 95px);
+      left: 50%;
+      transform: translate(-50%, 200%);
+      color: white;
+      width: 750px;
+      text-align: center;
+    }
+
+    .view-btn {
+      width: 95;
+      color: white;
+      background-color: rgb(33, 104, 105);
+      font-weight: bold;
+      border-style: none;
+      border-radius: 80px;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      position: absolute;
+      top: calc(50% - 95px);
+      left: 50%;
+      transform: translate(-50%, 300%);
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .view-btn:hover {
+      background-color: white;
+      color: rgb(33, 104, 105);
+      border: solid 1px rgb(33, 104, 105);
+    }
+
+    .about-div {
+    
+      background-color: white;
+      border-radius: 12px;
+      margin-top: 20px;
+      font-family: "Rubik", sans-serif;
+      width: 575px;
+      padding-top: 2px;
+      border: 1.5px solid gray;
+    }
+    .about {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 110px;
+      gap: 18px;
+    }
+    .p1-about,
+    .p2-about,
+    .p3-about {
+      display: inline-block;
+      color: rgb(0, 0, 0);
+      border: 1.5px solid gray;
+      border-radius: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-left: 10px;
+      margin-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .h1-about {
+      padding-left: 20px;
+    }
+
+    .Dalouna-p {
+      line-height: 25px;
+      padding-left: 20px;
+      width: 460px;
+    }
+
+    .Vegetarian-p {
+      width: 500px;
+      line-height: 25px;
+      padding-left: 20px;
+      color: gray;
+    }
+
+    .hh1-about {
+      padding-left: 20px;
+    }
+
+    .pp1-We {
+      line-height: 25px;
+      padding-left: 20px;
+      width: 450px;
+    }
+
+    .pp1-Ask {
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+
+    .about-div-2 {
+      background-color: white;
+      border-radius: 12px;
+      margin-top: 20px;
+      font-family: "Rubik", sans-serif;
+      width: 575px;
+      padding-top: 2px;
+      border: 1.5px solid gray;
+    }
+    .pp1-Ask {
+      color: grey;
+    }
+    .h1-menu {
+      display: flex;
+      justify-content: start;
+      margin-left: 381px;
+    }
+  </style>
+
   <body class="class-12429664">
     <!-- Header / Site Navigation (semantic) -->
-    <h> Dalouna </h>
     <header class="site-header">
-      <ol>
-        <ls> About </ls>
-        <ls> Menu </ls>
-        <ls> Hours </ls>
-        <ls> Find US </ls>
-        <ls> Contact</ls>
-      </ol>
+      <nav class="navbar-dalouna">
+        <div class="navidv">
+          <div class="logo"><a>Dalouna</a></div>
+
+          <ul>
+            <li><a href="#h1-about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#hours">Hours</a></li>
+            <li><a href="#find-us">Find Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- Main content -->
     <main id="home">
       <!-- Hero Section -->
-      <section class="hero"></section>
+      <section class="hero">
+        <img src="bg.jpg" alt="ReturantBackground" class="bg" />
+        <p class="Med-p">Mediterranean &#x2022; Paleestinian Kitchen</p>
+        <p class="welcome-p">Welcome to Dalouna</p>
+        <p class="Homestyle-p">
+          Homestyle flavors, fresh ingredients, and warm hospitality. Join us
+          for grilled specialties, mezze, and seasonal dishes inspired by the
+          Levant.
+        </p>
+        <button class="view-btn">View Menu</button>
+      </section>
 
       <!-- About (semantic sectioning) -->
-      <section id="about"></section>
+      <section id="about" class="about">
+        <div class="about-div">
+          <h1 id="h1-about" class="h1-about">About Us</h1>
+          <p class="Dalouna-p">
+            Dalouna is a neighborhood restaurant celebrating family recipes and
+            local produce. Our kitchen brings together classic Palestinian
+            dishes and modern twists.
+          </p>
+          <p class="Vegetarian-p">
+            Vegetarian & vegan options available . Halal meats . Dine-in &
+            takeaway
+          </p>
+          <p class="p1-about">Fresh Bread Daily</p>
+          <p class="p2-about">Wood-Fireed Girll</p>
+          <p class="p3-about">House Pickles</p>
+        </div>
+        <div class="about-div-2">
+          <h1 class="hh1-about">Chef's Note</h1>
+          <p class="pp1-We">
+            "We cook the food we love to serve at home-simple, bright, and
+            generous."
+          </p>
+          <p class="pp1-Ask">Ask us about today's seasonal specials.</p>
+        </div>
+      </section>
 
       <!-- Menu -->
-      <section id="menu"></section>
+      <section id="menu" class="menu">
+        <h1 class="h1-menu">Menu Highlights</h1>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
 
       <!-- Hours & Contact -->
       <section id="hours"></section>
 
       <!-- Find Us -->
       <section id="find-us"></section>
+
+      <!-- Contact -->
+      <section id="contact"></section>
     </main>
 
     <!-- Footer with internal link back to top and GitHub link -->
