@@ -9,89 +9,252 @@
     <meta name="assignment-token" content="a8fa181591ff" />
     <meta name="student-name" content="ahmad_essawii" />
     <meta name="student-id" content="12429664" />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
     <title>Dalouna Restaurant</title>
+
+    <style>
+      /* ------------------ Reset & Body ------------------ */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(251, 248, 242);
+        font-family: "Rubik", sans-serif;
+      }
+
+      /* ------------------ Navbar ------------------ */
+      .navidv {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: rgb(250, 246, 241);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        padding: 0 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo a {
+        font-size: 20px;
+        color: rgb(33, 104, 105);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        display: inline-block;
+      }
+
+      li a {
+        text-decoration: none;
+        color: rgb(33, 104, 105);
+        font-size: 17px;
+        font-weight: bold;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+
+      li a:hover {
+        color: rgb(72, 160, 119);
+        text-decoration: underline;
+      }
+
+      /* ------------------ Hero Section ------------------ */
+      .hero {
+        position: relative;
+        text-align: center;
+      }
+
+      .bg {
+        object-fit: cover;
+        width: 100%;
+        height: 600px;
+        display: block;
+      }
+
+      .Med-p {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        background-color: rgba(72, 160, 119, 0.9);
+        color: white;
+        border-radius: 120px;
+        padding: 5px 12px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      .welcome-p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 60px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .Homestyle-p {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: white;
+        width: 700px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .view-btn {
+        position: absolute;
+        top: 72%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: rgb(33, 104, 105);
+        color: white;
+        border: none;
+        border-radius: 80px;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .view-btn:hover {
+        background-color: white;
+        color: rgb(33, 104, 105);
+        border: 1px solid rgb(33, 104, 105);
+      }
+
+      /* ------------------ Common Card Style ------------------ */
+      .card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        width: 575px;
+        padding: 20px;
+      }
+
+      /* ------------------ About Section ------------------ */
+      .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 60px 0;
+      }
+
+      .h1-about,
+      .hh1-about {
+        margin-top: 0;
+      }
+
+      .Dalouna-p,
+      .Vegetarian-p,
+      .pp1-We,
+      .pp1-Ask {
+        line-height: 25px;
+        color: #333;
+      }
+
+      .p1-about,
+      .p2-about,
+      .p3-about {
+        display: inline-block;
+        color: rgb(0, 0, 0);
+        border: 1.5px solid gray;
+        border-radius: 20px;
+        padding: 10px 15px;
+        margin: 5px;
+      }
+
+      .pp1-Ask {
+        color: grey;
+      }
+
+      /* ------------------ Menu Section ------------------ */
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 60px 0;
+        background-color: #f4f0fa;
+        padding: 40px 0;
+      }
+
+      .Humms {
+        font-weight: bold;
+        font-size: 24px;
+        padding-bottom: 10px;
+      }
+
+      .s3r {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.5;
+      }
+
+      .p1-humms {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .p2-humms {
+        font-weight: bold;
+        color: rgb(33, 104, 105);
+        font-size: 18px;
+      }
+
+      .p3-humms {
+        color: grey;
+        margin-top: -8px;
+      }
+
+      hr.line {
+        border: none;
+        border-bottom: 2px dotted gray;
+        margin: 10px 0;
+      }
+
+      /* ------------------ Footer ------------------ */
+      footer {
+        background-color: rgb(250, 246, 241);
+        text-align: center;
+        padding: 20px;
+        color: rgb(33, 104, 105);
+        font-weight: bold;
+      }
+    </style>
   </head>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
 
-    .navidv {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: rgb(250, 246, 241);
-      font-family: Rubik;
-      padding-right: 15px;
-      padding-left: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 40px;
-      width: 100%;
-    }
-    .logo a {
-      padding-left: 126px;
-      font-size: 18px;
-      color: rgb(33, 104, 105);
-      text-decoration: none;
-    }
-    li {
-      list-style: none;
-      display: inline-block;
-    }
-    li a {
-      text-decoration: none;
-      color: rgb(33, 104, 105);
-      font-size: 18px;
-      font-weight: bold;
-      margin-right: 15px;
-    }
-    li:nth-child(5) a {
-      padding-right: 126px;
-    }
-    .bg {
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .hero {
-      padding: 0px;
-      margin: 0px;
-    }
-    .Med-p {
-      font-size: 18px;
-      font-family: Rubik;
-      color: rgb(0, 0, 0);
-      background-color: rgba(72, 160, 119);
-      padding: 0px;
-      margin: 0px;
-      text-align: center;
-      width: 380px;
-      border-radius: 120px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      
-    }
-  </style>
   <body class="class-12429664">
-    <!-- Header / Site Navigation (semantic) -->
+    <!-- Header -->
     <header class="site-header">
       <nav class="navbar-dalouna">
         <div class="navidv">
-          <div class="logo"><a href="#">Dalouna</a></div>
+          <div class="logo"><a href="#home">Dalouna</a></div>
 
           <ul>
             <li><a href="#about">About</a></li>
@@ -104,32 +267,133 @@
       </nav>
     </header>
 
-    <!-- Main content -->
+    <!-- Main -->
     <main id="home">
       <!-- Hero Section -->
       <section class="hero">
-        <img src="bg.jpg" alt="ReturantBackground" class="bg" />
-        <p class="Med-p">Mediteerranean . Paleestinian Kitchen</p>
+        <img src="bg.jpg" alt="Restaurant Background" class="bg" />
+        <p class="Med-p">Mediterranean • Palestinian Kitchen</p>
+        <p class="welcome-p">Welcome to Dalouna</p>
+        <p class="Homestyle-p">
+          Homestyle flavors, fresh ingredients, and warm hospitality. Join us
+          for grilled specialties, mezze, and seasonal dishes inspired by the
+          Levant.
+        </p>
+        <button class="view-btn">View Menu</button>
       </section>
 
-      <!-- About (semantic sectioning) -->
-      <section id="about"></section>
+      <!-- About -->
+      <section id="about" class="about">
+        <div class="about-div card">
+          <h1 id="h1-about" class="h1-about">About Us</h1>
+          <p class="Dalouna-p">
+            Dalouna is a neighborhood restaurant celebrating family recipes and
+            local produce. Our kitchen brings together classic Palestinian
+            dishes and modern twists.
+          </p>
+          <p class="Vegetarian-p">
+            Vegetarian & vegan options available • Halal meats • Dine-in &
+            takeaway
+          </p>
+          <p class="p1-about">Fresh Bread Daily</p>
+          <p class="p2-about">Wood-Fired Grill</p>
+          <p class="p3-about">House Pickles</p>
+        </div>
+
+        <div class="ChefNotes-div card">
+          <h1 class="hh1-about">Chef's Note</h1>
+          <p class="pp1-We">
+            "We cook the food we love to serve at home — simple, bright, and
+            generous."
+          </p>
+          <p class="pp1-Ask">Ask us about today's seasonal specials.</p>
+        </div>
+      </section>
 
       <!-- Menu -->
-      <section id="menu"></section>
+      <section id="menu" class="menu">
+        <div class="Meezze card">
+          <p class="Humms">Mezze</p>
 
-      <!-- Hours & Contact -->
+          <div class="s3r">
+            <p class="p1-humms">Hummus Bil Tahina</p>
+            <p class="p2-humms">$6</p>
+          </div>
+          <p class="p3-humms">chickpeas, tahini, lemon</p>
+          <hr class="line" />
+
+          <div class="s3r">
+            <p class="p1-humms">Mutabbal (Baba Ghanoush)</p>
+            <p class="p2-humms">$7</p>
+          </div>
+          <p class="p3-humms">smoky eggplant, pomegranate</p>
+          <hr class="line" />
+
+          <div class="s3r">
+            <p class="p1-humms">Falafel Plate</p>
+            <p class="p2-humms">$9</p>
+          </div>
+          <p class="p3-humms">herb falafel, tahini, pickles</p>
+        </div>
+
+        <div class="Mains card">
+          <p class="Humms">Mains</p>
+
+          <div class="s3r">
+            <p class="p1-humms">Mixed Grill</p>
+            <p class="p2-humms">$18</p>
+          </div>
+          <p class="p3-humms">kebab, shish tawook, kofta, sumac onions</p>
+          <hr class="line" />
+
+          <div class="s3r">
+            <p class="p1-humms">Musakhan Wrap</p>
+            <p class="p2-humms">$12</p>
+          </div>
+          <p class="p3-humms">sumac chicken, onions, taboon bread</p>
+          <hr class="line" />
+
+          <div class="s3r">
+            <p class="p1-humms">Maqluba</p>
+            <p class="p2-humms">$16</p>
+          </div>
+          <p class="p3-humms">layered rice, aubergine, cauliflower, yogurt</p>
+        </div>
+
+        <div class="Drinks card">
+          <p class="Humms">Drinks & Sweets</p>
+
+          <div class="s3r">
+            <p class="p1-humms">Mint Lemonade</p>
+            <p class="p2-humms">$4</p>
+          </div>
+          <p class="p3-humms">fresh mint, lemon, cane sugar</p>
+          <hr class="line" />
+
+          <div class="s3r">
+            <p class="p1-humms">Cardamom Tea</p>
+            <p class="p2-humms">$3</p>
+          </div>
+          <p class="p3-humms">black tea, cardamom pods</p>
+          <hr class="line" />
+
+          <div class="s3r">
+            <p class="p1-humms">Knafeh Nabulsi</p>
+            <p class="p2-humms">$7</p>
+          </div>
+          <p class="p3-humms">cheese pastry, orange blossom</p>
+        </div>
+      </section>
+
+      <!-- Future Sections -->
       <section id="hours"></section>
-
-      <!-- Find Us -->
       <section id="find-us"></section>
-
-      <!-- Contact -->
       <section id="contact"></section>
     </main>
 
-    <!-- Footer with internal link back to top and GitHub link -->
-    <footer class="site-footer site-12429664"></footer>
-  
+    <!-- Footer -->
+    <footer class="site-footer site-12429664">
+      © 2025 Dalouna Restaurant | Designed by Ahmad Essawii
+    </footer>
   </body>
 </html>
